@@ -1,10 +1,5 @@
 version: 0.2
 phases:
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase...
-      - yum install java-17-amazon-corretto-devel -y
-      - alternatives --set java /usr/lib/jvm/java-17-amazon-corretto.arch64/bin/java
   build:
     commands:
       - echo Packaging JAR file...
