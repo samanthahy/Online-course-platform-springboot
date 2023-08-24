@@ -366,7 +366,7 @@ CREATE TABLE CP_CATEGORY
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_ORDER_SEQ
     INCREMENT 1
-    START 1
+    START 25
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -374,11 +374,11 @@ CREATE SEQUENCE IF NOT EXISTS public.CP_ORDER_SEQ
 ALTER SEQUENCE public.CP_ORDER_SEQ
     OWNER TO postgres;
 --------------------------------------------------------
---  DDL for Sequence MSI_ORDER_PRODUCT_SEQ
+--  DDL for Sequence MSI_ORDER_COURSE_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_ORDER_COURSE_SEQ
     INCREMENT 1
-    START 1
+    START 29
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -390,7 +390,7 @@ ALTER SEQUENCE public.CP_ORDER_COURSE_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_COURSE_SEQ
     INCREMENT 1
-    START 1
+    START 23
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -402,7 +402,7 @@ ALTER SEQUENCE public.CP_COURSE_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_SECTION_SEQ
     INCREMENT 1
-    START 1
+    START 51
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -414,7 +414,7 @@ ALTER SEQUENCE public.CP_SECTION_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_LECTURE_SEQ
     INCREMENT 1
-    START 1
+    START 89
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -478,7 +478,7 @@ ALTER SEQUENCE public.CP_CATEGORY_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_USER_SEQ
     INCREMENT 1
-    START 1
+    START 33
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -490,7 +490,7 @@ ALTER SEQUENCE public.CP_USER_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_USER_DETAIL_SEQ
     INCREMENT 1
-    START 1
+    START 33
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -502,7 +502,7 @@ ALTER SEQUENCE public.CP_USER_DETAIL_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_USER_PROFILE_SEQ
     INCREMENT 1
-    START 1
+    START 49
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -514,7 +514,7 @@ ALTER SEQUENCE public.CP_USER_PROFILE_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_ENROLLMENT_SEQ
     INCREMENT 1
-    START 1
+    START 13
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -528,7 +528,7 @@ ALTER SEQUENCE public.CP_ENROLLMENT_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_CART_ITEM_SEQ
     INCREMENT 1
-    START 1
+    START 14
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -541,7 +541,7 @@ ALTER SEQUENCE public.CP_CART_ITEM_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_SHOPPING_SESSION_SEQ
     INCREMENT 1
-    START 1
+    START 7
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -567,7 +567,7 @@ ALTER SEQUENCE public.CP_DISCOUNT_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_PAYMENT_SEQ
     INCREMENT 1
-    START 1
+    START 9
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -591,7 +591,7 @@ ALTER SEQUENCE public.CP_REFUND_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_REVIEW_SEQ
     INCREMENT 1
-    START 1
+    START 53
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -604,7 +604,7 @@ ALTER SEQUENCE public.CP_REVIEW_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_PROFILE_IMAGE_SEQ
     INCREMENT 1
-    START 1
+    START 23
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -617,7 +617,7 @@ ALTER SEQUENCE public.CP_PROFILE_IMAGE_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_COURSE_IMAGE_SEQ
     INCREMENT 1
-    START 1
+    START 23
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -630,7 +630,7 @@ ALTER SEQUENCE public.CP_COURSE_IMAGE_SEQ
 --------------------------------------------------------
 CREATE SEQUENCE IF NOT EXISTS public.CP_LECTURE_VIDEO_SEQ
     INCREMENT 1
-    START 1
+    START 89
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;
@@ -1378,4 +1378,5 @@ CREATE TRIGGER cp_lecture_video_id_gen_trg
     EXECUTE FUNCTION public.lecture_video_id();
 ------------------------------------------------------------
 ------------------------------------------------------------
+
 

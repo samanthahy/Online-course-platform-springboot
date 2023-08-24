@@ -53,15 +53,20 @@ public class AuthService {
                     new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
-            String jwt = jwtUtils.generateJwtToken(authentication);
-            // httpResponse.addHeader("Authentication", jwt);
 
             User user = (User) authentication.getPrincipal();
 
+            // Check user status after successful authentication
+            if ("Deactivated".equals(user.getStatus())) {
+                System.out.println("Login attempt for deactivated user: " + loginRequest.getUsername());
+                return new JwtAuthenticationResponse(false, 403, "Account is deactivated. Please contact support.", null, null);
+            }
+
+            String jwt = jwtUtils.generateJwtToken(authentication);
             String role = user.getAuthorities().iterator().next().getAuthority();
 
-            System.out.println("###############################################3");
-            System.out.println(user);
+//            System.out.println("###############################################3");
+//            System.out.println(user);
 
 
             UserDTO userDTO = new UserDTO() {};
