@@ -134,6 +134,7 @@ public class SecurityConfig {
         configuration.addAllowedOrigin("http://localhost:4200"); // You should only set trusted site here. e.g. http://localhost:4200 means only this site can access.
         configuration.addAllowedOrigin("http://course-platform-ngcode.s3-website-us-west-2.amazonaws.com"); // Add your S3 bucket URL or any other origin
         configuration.addAllowedOrigin("http://d29vgj3ii7xe4d.cloudfront.net"); // Add your S3 bucket URL or any other origin
+        configuration.addAllowedOrigin("*");
         configuration.setAllowedMethods(Arrays.asList("GET","POST","PUT","DELETE","HEAD","OPTIONS"));
         configuration.addAllowedHeader("*");
         configuration.setAllowCredentials(true);
